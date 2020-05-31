@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    width:25vw;
+    height: 95vh;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 60px;
+    background: #f5f5f5;
+}
+
+.container{
+    margin-top: 2.5vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header{
+    min-height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/bg4.jpg');
+    /* background:url('../img/bg4.jpg') no-repeat 0px 0px; */
+    background-size: cover;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color: blue;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: grey;
+    color: white;
+}
+
+button.complete-btn,
+button.trash-btn{
+    background: white;
+}
+
+form {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container{
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    height: 42%;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    /* box-shadow: 0px 1px 0px grey; */
+    box-shadow: 5px 5px 2px 1px #ececec;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn{
+    border: none;
+    padding: 1rem;
+    cursor:pointer;
+    font-size: 1rem;
+} 
+
+.trash-btn{
+    border-radius: 15px;
+    outline: none;
+    color: red;
+}
+
+.complete-btn{
+    outline: none;
+    color:rgb(47, 245, 47);
+}
+
+.todo-item {
+    padding: 0rem 1.5rem;
+    text-align: left;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: blue;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    background: white;
+    float: right;
+}
+
+select.filter-todo{
+    margin-right: 1%;
+}
+
+
+.input-container{
+    margin-top: 0.5rem;
+}
+
+input.todo-input {
+    width: 84%;
+    outline: none;
+}
+
+/* Clear localstorage */
+.clear {
+    padding-left: 4%;
+    padding-top: 2%;
+    float: left;
+    font-size: 30px;
+    color: blue;
+}
+
+/* Day of the Week */
+i.fas.fa-redo-alt {
+    cursor: pointer;
+}
+
+#day {
+    font-size: 4vw;
+}
+
+/* Check media query for responsiveness on mobile */
+@media(max-width: 1620px) {
+    .container{
+        width: 25vw;
+    }
+
+    input.todo-input{
+        width: 84%;
+    }
+
+    .todo-container {
+        height: 38%;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .container{
+        width: 40vw;
+    }
+
+    input.todo-input{
+        width: 84%;
+    }
+
+    .todo-container {
+        height: 38%;
+    }
+}
+
+@media(max-width: 768px){
+
+    .container{
+        width: 80vw;
+    }
+
+    form{
+        display: block;
+    }
+
+    input.todo-input{
+        width: 84%;
+    }
+
+    .todo-container {
+        height: 38%;
+    }
+
+    #day {
+        font-size: 12vw;
+    }
+}
